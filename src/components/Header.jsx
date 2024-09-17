@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Navbar from "./Navbar";
 
 function Header() {
@@ -37,17 +38,16 @@ function Header() {
         </div>
 
         <div className="flex items-center justify-center gap-3">
-          <button className="flex h-11 items-center justify-center gap-3 rounded-xl border border-solid border-[#572D23] bg-[#7B3F32] px-4 py-0 text-lg font-semibold leading-7 text-white">
-            Discover More
-          </button>
-
-          <button className="flex h-11 items-center justify-center gap-3 rounded-xl border border-solid border-[#F3CE5E] bg-[#F3CE5E] px-4 py-0 text-lg font-semibold leading-7 text-black">
-            Book Your Adventure
-          </button>
+          <Button variant="brown"> Discover More</Button>
+          <Button variant="yellow"> Book Your Adventure</Button>
         </div>
       </section>
 
-      <img src="image.png" alt="" className="h-fit w-fit" />
+      <img
+        src="img-hero.png"
+        alt="Photo of a van in desert"
+        className="h-fit w-fit"
+      />
     </header>
   );
 }
