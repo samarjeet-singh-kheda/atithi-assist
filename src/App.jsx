@@ -1,5 +1,26 @@
+import Header from "./components/Header";
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline bg-green-400">Hello world!</h1>
+    <>
+      <Header />
+
+      <main>
+        {/* SECTION 1 */}
+
+        {/* CAROUSEL 1 */}
+        {/* CAROUSEL 2 */}
+
+        {/* SECTION 2 */}
+
+        {/* USER REVIEWS */}
+
+        {/* FAQ */}
+
+        {/* JOIN SECTION */}
+      </main>
+
+      <footer>{/* FOOTER */}</footer>
+    </>
   );
 }
