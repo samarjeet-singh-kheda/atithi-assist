@@ -1,9 +1,23 @@
 import Header from "./components/Header";
 import Button from "./components/Button";
-import Carousel from "./components/Carousel";
+
 import reviews from "./data/userReviews";
 import Card from "./components/Card";
-import Accordion from "./components/Accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import faqs from "./data/faq";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./components/ui/carousel";
+import emblaCarouselAutoplay from "embla-carousel-autoplay";
 
 export default function App() {
   return (
@@ -53,7 +67,34 @@ export default function App() {
               Explore Cultural Treasures with Ease
             </h2>
           </div>
-          <Carousel />
+
+          <Carousel
+            plugins={[emblaCarouselAutoplay({ delay: 1600 })]}
+            className="w-full px-16"
+          >
+            <CarouselContent className="flex items-start gap-6 sm:gap-20">
+              {[
+                "Museum Tours",
+                "Art Exhibitions",
+                "Historical Sites",
+                "Concert Tickets",
+                "Local Events",
+              ].map((title, idx) => (
+                <CarouselItem
+                  key={title}
+                  className="flex basis-1/4 flex-col items-start justify-center gap-4"
+                >
+                  <img
+                    src={`carousel-1/img${idx + 1}.jpeg`}
+                    alt=""
+                    className="h-[30rem] w-[90rem] rounded-lg border border-solid border-[#B2AB9B]"
+                  />
+
+                  <h3 className="text-xl font-semibold">{title}</h3>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </section>
 
         {/**
@@ -70,7 +111,34 @@ export default function App() {
               Seamless Voice Booking in Any Language
             </h2>
           </div>
-          <Carousel />
+
+          <Carousel
+            plugins={[emblaCarouselAutoplay({ delay: 1800 })]}
+            className="w-full px-16"
+          >
+            <CarouselContent className="flex items-start gap-6 sm:gap-20">
+              {[
+                "Museum Tours",
+                "Art Exhibitions",
+                "Historical Sites",
+                "Concert Tickets",
+                "Local Events",
+              ].map((title, idx) => (
+                <CarouselItem
+                  key={title}
+                  className="flex basis-1/4 flex-col items-start justify-center gap-4"
+                >
+                  <img
+                    src={`carousel-2/img${idx + 1}.jpeg`}
+                    alt=""
+                    className="h-[30rem] w-[90rem] rounded-lg border border-solid border-[#B2AB9B]"
+                  />
+
+                  <h3 className="text-xl font-semibold">{title}</h3>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </section>
 
         {/**
@@ -246,7 +314,19 @@ export default function App() {
               Your Queries Answered
             </h3>
           </div>
-          <Accordion />
+
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, idx) => (
+              <AccordionItem value={idx + 1} key={faq.title}>
+                <AccordionTrigger className="text-lg font-medium">
+                  {faq.title}
+                </AccordionTrigger>
+                <AccordionContent className="text-lg">
+                  {faq.text}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </section>
 
         {/**
@@ -334,7 +414,7 @@ export default function App() {
               </span>
             </div>
 
-            <div className="text-footer-black font-medium leading-7">
+            <div className="font-medium leading-7 text-footer-black">
               &copy; 2023 Atithi Asist. All Rights Reserved.
             </div>
           </div>
