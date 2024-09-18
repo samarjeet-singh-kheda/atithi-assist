@@ -20,13 +20,13 @@ const reviews = [
     tweet:
       "Booking tickets with the chatbot is so convenient! I appreciate the personalized recommendations and the ease of using QR codes. My kids can’t wait for our next museum trip!",
   },
-  {
-    img: "/users/user4.png",
-    username: "David Lee",
-    bio: "Cultural Explorer",
-    tweet:
-      "Atithi Assist is a game changer! The tracking feature helped us navigate easily while exploring, and the detailed museum information made our visits so much more enriching.",
-  },
+  // {
+  //   img: "/users/user4.png",
+  //   username: "David Lee",
+  //   bio: "Cultural Explorer",
+  //   tweet:
+  //     "Atithi Assist is a game changer! The tracking feature helped us navigate easily while exploring, and the detailed museum information made our visits so much more enriching.",
+  // },
 ];
 
 export default reviews;

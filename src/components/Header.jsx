@@ -5,13 +5,14 @@ function Header() {
   return (
     <header className="flex w-full flex-col items-center gap-16 bg-[#7C4032]">
       <div className="flex h-[4.25rem] items-center justify-between self-stretch px-6 py-0">
-        <div className="flex flex-custom items-center gap-[0.625rem]">
+        <div className="flex flex-custom items-center gap-8">
           <svg
             height="32"
             width="32"
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10"
           >
             <path
               d="M16 0C19.6819 0 22.6667 2.98477 22.6667 6.66667H9.33331C9.33331 2.98477 12.3181 0 16 0Z"
@@ -73,6 +74,7 @@ function Header() {
           viewBox="0 0 32 32"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="h-16 w-16"
         >
           <path
             d="M16 0C19.6819 0 22.6667 2.98477 22.6667 6.66667H9.33331C9.33331 2.98477 12.3181 0 16 0Z"

@@ -11,6 +11,7 @@ export default {
       },
       colors: {
         "custom-black": "rgba(26, 26, 26, 0.36)", // Custom color
+        "footer-black": "rgba(255, 255, 255, 0.36)",
       },
     },
   },
