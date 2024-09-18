@@ -1,13 +1,13 @@
 function Card({ review }) {
   return (
-    <div className="flex min-w-[25rem] flex-custom flex-col items-start gap-3 self-stretch rounded-xl border border-solid border-[#B2AB9B] p-4">
+    <div className="flex flex-custom flex-col items-start gap-3 self-stretch rounded-xl border border-solid border-[#B2AB9B] p-4">
       <div className="flex w-full items-center gap-3">
         <img src={review.img} alt="user profile image" className="h-12 w-12" />
 
         <div className="flex h-[3.125rem] w-5/6 flex-col items-start justify-center gap-1">
           <h3 className="text-lg font-medium">{review.username}</h3>
 
-          <p className="text-custom-black text-sm font-medium">{review.bio}</p>
+          <p className="text-sm font-medium text-custom-black">{review.bio}</p>
         </div>
 
         <svg

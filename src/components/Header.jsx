@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 function Header() {
   return (
     <header className="flex w-full flex-col items-center gap-16 bg-[#7C4032]">
-      <div className="flex h-[4.25rem] items-center justify-between self-stretch px-6 py-0">
+      <div className="flex h-[4.25rem] w-full items-center justify-between px-4 sm:px-8 md:px-16">
         <div className="flex flex-custom items-center gap-8">
           <svg
             height="32"
@@ -56,18 +56,18 @@ function Header() {
           <Navbar />
         </div>
 
-        <div className="my- flex items-end justify-end gap-4">
-          <button className="flex h-11 items-center justify-center rounded-xl px-4 py-0 font-semibold text-[#F2F2F2]">
+        <div className="flex items-end justify-end gap-4">
+          <button className="h-11 rounded-xl px-4 py-2 font-semibold text-[#F2F2F2]">
             Sign in
           </button>
 
-          <button className="flex h-11 items-center justify-center rounded-xl border border-solid border-[#F3CE5E] bg-[#F3CE5E] px-4 py-0 font-semibold text-black">
+          <button className="flex h-11 items-center justify-center rounded-xl border border-solid border-[#F3CE5E] bg-[#F3CE5E] px-4 py-2 font-semibold text-black">
             Get Started
           </button>
         </div>
       </div>
 
-      <section className="flex min-w-[31.5rem] flex-col items-center gap-11 self-stretch pt-8">
+      <section className="flex flex-col items-center gap-11 px-4 pt-8 text-center sm:px-8 md:px-16">
         <svg
           height="32"
           width="32"
@@ -114,8 +114,8 @@ function Header() {
           />
         </svg>
 
-        <div className="flex flex-col items-center gap-3 self-stretch pt-8">
-          <h1 className="text-[3rem] font-bold leading-[4rem] text-white">
+        <div className="flex flex-col items-center gap-3 pt-8">
+          <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             Welcome to Atithi Assist!
           </h1>
           <p className="text-center text-xl font-normal leading-8 text-white">
@@ -125,7 +125,7 @@ function Header() {
           </p>
         </div>
 
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button variant="brown"> Discover More</Button>
           <Button variant="yellow"> Book Your Adventure</Button>
         </div>
@@ -134,7 +134,7 @@ function Header() {
       <img
         src="hero-img.jpeg"
         alt="Photo of a van in desert"
-        className="w-full"
+        className="h-auto max-h-[48rem] w-full object-cover"
       />
     </header>
   );
