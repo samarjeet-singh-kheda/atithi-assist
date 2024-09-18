@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function ChatWindow({ onClick }) {
   const [messages, setMessages] = useState([
-    { type: "bot", text: "Hi. Welcome to Atithi Assist. How may i help you?" },
+    { type: "bot", text: "Hi! Welcome to Atithi Assist. How may I help you?" },
   ]);
   const [userInput, setUserInput] = useState("");
 
@@ -32,18 +32,48 @@ function ChatWindow({ onClick }) {
         <div className="flex h-14 items-center justify-between rounded-t-[2rem] bg-[#1A1A1A] px-4 py-2 text-white">
           <div className="flex items-center space-x-3">
             <svg
-              className="h-8 w-8"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
+              viewBox="0 0 32 32"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 4v1m0 10v1m7-7h1M4 12H3m12.828-7.828l.707.707M6.343 17.657l-.707-.707M16.95 16.95l.707.707M6.343 6.343l-.707-.707"
-              ></path>
+                d="M16 0C19.6819 0 22.6667 2.98477 22.6667 6.66667H9.33331C9.33331 2.98477 12.3181 0 16 0Z"
+                fill="#fff"
+              />
+              <path
+                d="M8 16C8 11.5817 11.5817 8 16 8C20.4183 8 24 11.5817 24 16C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z"
+                fill="#fff"
+              />
+              <path
+                d="M6.66667 9.33331C2.98477 9.33331 0 12.3181 0 16C0 19.6819 2.98477 22.6667 6.66667 22.6667V9.33331Z"
+                fill="#fff"
+              />
+              <path
+                d="M32 16C32 19.6819 29.0152 22.6667 25.3333 22.6667V9.33331C29.0152 9.33331 32 12.3181 32 16Z"
+                fill="#fff"
+              />
+              <path
+                d="M9.33331 25.3333C9.33331 29.0152 12.3181 32 16 32C19.6819 32 22.6667 29.0152 22.6667 25.3333H9.33331Z"
+                fill="#fff"
+              />
+              <path
+                d="M25.3333 2.66669C27.5425 2.66669 29.3333 4.45755 29.3333 6.66669H25.3333V2.66669Z"
+                fill="#fff"
+              />
+              <path
+                d="M25.3333 29.3333C27.5425 29.3333 29.3333 27.5425 29.3333 25.3333H25.3333V29.3333Z"
+                fill="#fff"
+              />
+              <path
+                d="M2.66669 6.66669C2.66669 4.45755 4.45755 2.66669 6.66669 2.66669V6.66669H2.66669Z"
+                fill="#fff"
+              />
+              <path
+                d="M2.66669 25.3333C2.66669 27.5425 4.45755 29.3333 6.66669 29.3333V25.3333H2.66669Z"
+                fill="#fff"
+              />
             </svg>
             <span className="text-lg font-semibold">Atithi Assist Chatbot</span>
           </div>
@@ -129,7 +159,7 @@ function ChatWindow({ onClick }) {
 
       {/* Background Overlay */}
       <div
-        className="bg-overlay-black fixed left-0 top-0 z-[5] h-full w-full backdrop-blur-sm"
+        className="fixed left-0 top-0 z-[5] h-full w-full bg-overlay-black backdrop-blur-sm"
         onClick={onClick}
       ></div>
     </>

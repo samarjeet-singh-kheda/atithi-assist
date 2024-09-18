@@ -200,7 +200,6 @@ export default function App() {
         </section>
 
         {/** FEATURES SECTION **/}
-
         <section className="flex flex-wrap content-center items-center gap-x-16 gap-y-11 p-4 sm:p-8 md:p-16">
           <div className="flex w-full flex-custom flex-col items-start gap-8 md:w-1/2">
             <h2 className="text-2xl font-bold leading-[2.25rem] sm:text-[1.875rem] sm:leading-[2.625rem]">
@@ -382,17 +381,19 @@ export default function App() {
 
         {/** USER REVIEWS **/}
         <section className="flex flex-col items-center justify-center gap-8 p-4 sm:gap-16 sm:p-8 md:p-16">
-          <h2 className="text-2xl font-bold leading-[2.25rem] sm:text-3xl sm:leading-[2.625rem]">
+          <h2 className="text-xl font-bold leading-[2.25rem] sm:text-2xl sm:leading-[2.625rem]">
             What Our Users Are Saying
           </h2>
 
-          <div className="flex flex-wrap items-start justify-center gap-8 sm:gap-11">
+          <div className="flex flex-wrap items-start justify-center gap-6 sm:gap-8">
             {reviews.map((review, id) => (
               <Card key={id} review={review} />
             ))}
           </div>
 
-          <Button variant="skin">Read More Reviews</Button>
+          <button className="rounded-full bg-[#F3CE5E] px-4 py-2 text-black hover:bg-[#d3b44c]">
+            Read More Reviews
+          </button>
         </section>
 
         {/** FAQ **/}
