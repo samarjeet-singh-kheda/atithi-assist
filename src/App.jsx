@@ -391,7 +391,7 @@ export default function App() {
             ))}
           </div>
 
-          <button className="rounded-full bg-[#F3CE5E] px-4 py-2 text-black hover:bg-[#d3b44c]">
+          <button className="rounded-full bg-[#F3CE5E] px-4 py-2 font-semibold text-black hover:bg-[#d3b44c]">
             Read More Reviews
           </button>
         </section>
