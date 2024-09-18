@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Carousel from "./components/Carousel";
+import reviews from "./data/userReviews";
+import Card from "./components/Card";
 
 export default function App() {
   return (
@@ -8,6 +10,10 @@ export default function App() {
       <Header />
 
       <main>
+        {/**
+         *    VISION SECTION
+         *
+         */}
         <section className="flex flex-wrap content-center items-center gap-x-16 gap-y-11 p-16">
           <div className="flex flex-custom flex-col items-start gap-8">
             <div className="flex flex-col items-start gap-3 self-stretch text-black">
@@ -26,17 +32,50 @@ export default function App() {
           </div>
 
           <img
-            src="img-open.png"
+            src="open-img.jpeg"
             alt="Photo of a man showing smartphone"
-            className="h-[32.75rem] min-w-[31.5rem] border border-solid border-[#B2AB9B]"
+            className="w-[34rem] border border-solid border-[#B2AB9B]"
           />
         </section>
 
-        {/* CAROUSEL 1 */}
-        <Carousel />
-        {/* CAROUSEL 2 */}
-        <Carousel />
+        {/**
+         *     CAROUSEL 1
+         *
+         */}
+        <section className="flex flex-col items-center gap-16 px-0 py-16">
+          <div className="flex flex-col items-center justify-end gap-4 self-stretch px-16 py-0">
+            <span className="text text-lg leading-7">
+              Experience the Future of Ticket Booking with Atithi Assist!
+            </span>
 
+            <h2 className="text-[1.875rem] font-bold leading-[2.625rem]">
+              Explore Cultural Treasures with Ease
+            </h2>
+          </div>
+          <Carousel />
+        </section>
+
+        {/**
+         *     CAROUSEL 2
+         *
+         */}
+        <section className="flex flex-col items-center gap-16 px-0 py-16">
+          <div className="flex flex-col items-center justify-end gap-4 self-stretch px-16 py-0">
+            <span className="text text-lg leading-7">
+              Your Multilingual Travel Companion Awaits!
+            </span>
+
+            <h2 className="text-[1.875rem] font-bold leading-[2.625rem]">
+              Seamless Voice Booking in Any Language
+            </h2>
+          </div>
+          <Carousel />
+        </section>
+
+        {/**
+         *    FEATURE SECTION
+         *
+         */}
         <section className="flex flex-wrap content-center items-center gap-x-16 gap-y-11 p-16">
           <div className="flex flex-custom flex-col items-start gap-11">
             <h2 className="text-[1.875rem] font-bold leading-[2.625rem]">
@@ -107,7 +146,7 @@ export default function App() {
               </svg>
 
               <div className="flex flex-col items-start gap-[0.625rem] self-stretch">
-                <h2 className="text-lg font-semibold">Voice Booking</h2>
+                <h3 className="text-lg font-semibold">Voice Booking</h3>
 
                 <p className="text-base">
                   Easily book your tickets using our advanced AI-powered voice
@@ -153,7 +192,7 @@ export default function App() {
               </svg>
 
               <div className="flex flex-col items-start gap-[0.625rem] self-stretch">
-                <h2 className="text-lg font-semibold">QR Code Tickets</h2>
+                <h3 className="text-lg font-semibold">QR Code Tickets</h3>
 
                 <p className="text-base">
                   Receive instant QR code tickets for effortless entry and
@@ -168,16 +207,41 @@ export default function App() {
           </div>
 
           <img
-            src="img-feature.png"
+            src="feature-img.jpeg"
             alt="Photo of a man showing smartphone"
-            className="h-[32.75rem] min-w-[31.5rem] border border-solid border-[#B2AB9B]"
+            className="h-[34rem] border border-solid border-[#B2AB9B]"
           />
         </section>
 
-        {/* USER REVIEWS */}
+        {/**
+         *   USER REVIEWS
+         *
+         */}
+        <section className="flex flex-col items-center justify-center gap-16 p-16">
+          <h2 className="text-3xl font-bold leading-[2.625rem]">
+            What Our Users Are Saying
+          </h2>
 
-        {/* FAQ */}
-        {/* JOIN SECTION */}
+          <div className="content-start-start flex flex-wrap items-start justify-center gap-11 self-stretch">
+            {reviews.map((review, id) => (
+              <Card key={id} review={review} />
+            ))}
+          </div>
+
+          <button className="h-11 rounded-xl border border-solid border-[#B2AB9B] px-4 py-0 text-lg font-semibold">
+            Read More Reviews
+          </button>
+        </section>
+
+        {/**
+         *   FAQ
+         *
+         */}
+
+        {/**
+         *   JOIN SECTION
+         *
+         */}
       </main>
 
       <footer>{/* FOOTER */}</footer>

@@ -130,9 +130,9 @@ function Header() {
       </section>
 
       <img
-        src="img-hero.png"
+        src="hero-img.jpeg"
         alt="Photo of a van in desert"
-        className="h-fit w-fit"
+        className="w-full"
       />
     </header>
   );
